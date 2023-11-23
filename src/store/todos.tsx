@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import {ReactNode, createContext, useState , useContext} from "react";
 
+
 export type TodosProviderProps={
     children : ReactNode // children kuch bhi ho skta hai mtlb TYPE
 }
@@ -43,8 +44,8 @@ export const TodosProvider = ({children}: TodosProviderProps)=>{
 
     return <todosContext.Provider value={{todos, handleAddToDo}}>
         {children}
-    </todosContext.Provider>
-}
+    </todosContext.Provider>}
+
 
 export const useTodos =()=>{
     const todosConsumer = useContext(todosContext);

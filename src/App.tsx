@@ -8,6 +8,7 @@ const App = () => {
         
       </h1>
       < AddtoDo/>
+      {/* <Todos/> */}
     </main>
   )
 }

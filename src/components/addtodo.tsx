@@ -8,6 +8,7 @@ const AddtoDo = () => {
     const handleFormSubmit =(e:FormEvent<HTMLElement> )=>{
         e.preventDefault();
         handleAddToDo(todo)
+
         setTodo("")
     }
     
@@ -19,6 +20,7 @@ const AddtoDo = () => {
     </form>
   )
 }
+
 
 export default AddtoDo
 // work in progress
