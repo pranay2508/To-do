@@ -1,5 +1,5 @@
 import AddtoDo from "./components/addtodo"
-
+import Todos from "./components/todos"
 const App = () => {
   return (
     <main>
@@ -8,7 +8,7 @@ const App = () => {
         
       </h1>
       < AddtoDo/>
-      {/* <Todos/> */}
+      <Todos/>
     </main>
   )
 }
