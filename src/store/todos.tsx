@@ -15,7 +15,7 @@ export type Todo = {
 
 export type TodosContext = {
     todos:Todo[],
-    handleAddToDo:(task:string)=>void; // cal signature
+    handleAddToDo:(task:string)=>void; // call signature
     toggleTodoAsCompleted:(id:string) => void;
     handleDeleteTodo:(id:string) => void;
 }
@@ -24,7 +24,7 @@ export const todosContext = createContext<TodosContext | null >(null)
 export const TodosProvider = ({children}: TodosProviderProps)=>{
 
 
-    const [todos , setTodos] = useState<Todo[]>([])
+    const [ todos , setTodos] = useState<Todo[]>([])
     const handleAddToDo =(task:string)=>{
         setTodos((prev)=>{
             const newTodos: Todo[]= [
@@ -36,8 +36,8 @@ export const TodosProvider = ({children}: TodosProviderProps)=>{
                 },
                 ...prev
             ]
-            console.log("my" + prev);
-            console.log(newTodos);
+            // console.log("my" + prev);
+            // console.log(newTodos);
             return newTodos
         })
     }
@@ -52,7 +52,7 @@ export const TodosProvider = ({children}: TodosProviderProps)=>{
                 }
                 return todo;
             })
-            return newTodos
+            return newTodos;
         })
      }
 
@@ -66,7 +66,7 @@ export const TodosProvider = ({children}: TodosProviderProps)=>{
      }
 
 
-    return <todosContext.Provider value={{todos, handleAddToDo , toggleTodoAsCompleted ,handleDeleteTodo}}>
+    return <todosContext.Provider value={{ todos, handleAddToDo , toggleTodoAsCompleted ,handleDeleteTodo}}>
         {children}
     </todosContext.Provider>}
 
