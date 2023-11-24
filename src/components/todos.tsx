@@ -2,7 +2,7 @@
 
 import { useTodos} from "../store/todos"
 const Todos =()=>{
-    const{todos , toggleTodoAsCompleted} = useTodos();
+    const{todos , toggleTodoAsCompleted ,handleDeleteTodo} = useTodos();
     // eslint-disable-next-line prefer-const
     let filterData = todos;
 
