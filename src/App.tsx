@@ -1,5 +1,6 @@
 import AddtoDo from "./components/addtodo"
 import Todos from "./components/todos"
+import Navbar from "./components/navbar"
 const App = () => {
   return (
     <main>
@@ -7,6 +8,7 @@ const App = () => {
         TODO REACT + TYPESCRIPT 
         
       </h1>
+      <Navbar/>
       < AddtoDo/>
       <Todos/>
     </main>

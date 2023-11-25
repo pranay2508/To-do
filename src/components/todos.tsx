@@ -1,10 +1,26 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prefer-const */
 // import React from 'react'
 
 import { useTodos} from "../store/todos"
+import {useSearchParams} from "react-router-dom";
 const Todos =()=>{
     const{todos , toggleTodoAsCompleted ,handleDeleteTodo} = useTodos();
+    
+    const [searchParams]= useSearchParams();
+    
+    let todosData = searchParams.get("todos");
+    
+    
+    
     // eslint-disable-next-line prefer-const
     let filterData = todos;
+    if(todosData ==="active"){
+        filterData = filterData.filter((task)=> !task.completed )
+    }
+    if(todosData ==="completed"){
+        filterData = filterData.filter((task)=> !task.completed )
+    }
 
     return (
 
